@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+	 .error {color: red;}
+ body {
+	font-family: "Lucida Console", "Courier New", monospace;
+	background-color: #add8e6;
+}
+ h2{
+font-size: 30px;	 
+ }
+
+    #calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 8px;
+      max-width: 300px;
+    }
+
+
+    #display {
+      grid-column: span 4;
+      text-align: right;
+      padding: 8px;
+      font-size: 20px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+	  footer {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+  <title>Calculator</title>
+</head>
+<body>
+
+<div id="calculator">
+  <div id="display">0</div>
+  <button onclick="clearDisplay()">Clear</button>
+  <button onclick="appendToDisplay('7')">7</button>
+  <button onclick="appendToDisplay('8')">8</button>
+  <button onclick="appendToDisplay('9')">9</button>
+  <button onclick="appendToDisplay('/')">/</button>
+
+  <button onclick="appendToDisplay('4')">4</button>
+  <button onclick="appendToDisplay('5')">5</button>
+  <button onclick="appendToDisplay('6')">6</button>
+  <button onclick="appendToDisplay('*')">*</button>
+  <button onclick="appendToDisplay('1')">1</button>
+  <button onclick="appendToDisplay('2')">2</button>
+  <button onclick="appendToDisplay('3')">3</button>
+  <button onclick="appendToDisplay('-')">-</button>
+  <button onclick="appendToDisplay('0')">0</button>
+  <button onclick="calculateResult()">=</button>
+  <button onclick="appendToDisplay('+')">+</button>
+</div>
+
+<script>
+  let display = document.getElementById('display');
+
+  function appendToDisplay(value) {
+    if (display.textContent === '0') {
+
+      display.textContent = value;
+    } else {
+      display.textContent += value;
+    }
+  }
+
+  function clearDisplay() {
+    display.textContent = '0';
+  }
+
+  function calculateResult() {
+    try {
+      display.textContent = eval(display.textContent);
+    } catch (error) {
+      display.textContent = 'Error';
+    }
+  }
+</script>
+<a href="Projects.html">Back</a>
+<footer>
+    <p>&copy; 2024. Portia Rammela All rights reserved.</p>
+  </footer>
+   
+</body>
+</html>

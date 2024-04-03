@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <style>
+	.error {color: #FF0000;}
+ body {
+	font-family: "Lucida Console", "Courier New", monospace;
+	background-color: #87CEEB;
+}
+ h2{
+font-size: 30px;	 
+ }
+    header, section, footer {
+      padding: 20px;
+      text-align: center;
+    }
+
+   
+
+    section {
+	
+
+      background-color: #6A5ACD;
+    }
+
+    footer {
+      background-color: #808080;
+      color: #FFFFFF;
+    }
+
+    img {
+      border-radius: 50%;
+      max-width: 200px;
+    }
+	</style>
+	
+  <script language="JavaScript">
+    function showInput() {
+	
+	
+	
+	var x = document.forms["myForm"]["message"].value;
+  if (x == "") {
+    alert("Number of days must be filled out");
+    return false;
+  }
+     else if(document.getElementById('entry suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    document.getElementById("entry suite").value;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    (document.getElementById("user_input").value)*500;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}					
+		
+else if(document.getElementById('entry suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    (document.getElementById("user_input").value)*1000;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    document.getElementById("user_input").value;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}					
+else if(document.getElementById('intermediate suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    document.getElementById("intermediate suite").value;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    (document.getElementById("user_input").value)*1500;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}					
+else if(document.getElementById('senior suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    document.getElementById("senior suite").value;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    (document.getElementById("user_input").value)*2000;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}					
+else if(document.getElementById('Executive suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    document.getElementById("Executive suite").value;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    (document.getElementById("user_input").value)*2500;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}					
+		else if(document.getElementById('Penthouse suite').checked){ 
+	 
+	 document.getElementById('display').innerHTML = "Suite chosen: "+
+                    document.getElementById("Penthouse suite").value;
+					
+		document.getElementById('displayy').innerHTML = "Number of jdays: "+
+                    (document.getElementById("user_input").value)*3000;
+
+		document.getElementById('displayyy').innerHTML = "Number of days: "+
+                    document.getElementById("user_input").value;
+}	
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form name="myForm">
+  <h3 style="border-bottom:5px solid gray">Hotel Booking Application</h3>
+   <h1>Please select a suite and enter number of days your staying below: </h1>
+  
+  <input type="radio" id="entry suite" name="suite" value="entry suite">
+  <label for="entry suite">Entry suite</label>
+  
+  <input type="radio" id="intermediate suite" name="suite" value="intermediate suite">
+  <label for="intermediate suite">Intermediate suite</label>
+  
+  <input type="radio" id="senior suite" name="suite" value="senior suite">
+  <label for="senior suite">Senior suite</label>
+  
+  <input type="radio" id="Executive suite" name="suite" value="Executive suite">
+  <label for="Executive suite">Executive suite</label>
+  
+   <input type="radio" id="Penthouse suite" name="suite" value="Penthouse suite">
+  <label for="Penthouse suite">Penthouse suite</label>
+
+  <br> <br>
+    <label><b>Number of days:</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+<br>
+  <input type="submit" onclick="showInput();"><br/>
+  <h1>Make Another Booking Above</h1>
+  <h3>Your Booking Results</h3>
+  <h4><span id='display'></span></h4>
+  <h4><span id='displayy'></span></h4>
+  <h4><span id='displayyy'></span></h4>
+  
+   <a href="Projects.html">Back</a>
+<footer>
+    <p>&copy; 2024. Portia Rammela All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>
